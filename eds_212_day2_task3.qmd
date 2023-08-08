@@ -38,3 +38,26 @@ a = 1.2
 
 eval(dpda)
 ```
+
+section 4: make another penguin plot
+
+x= bill length, y = bill depth
+
+```{r}
+ggplot(data = penguins, aes(x = bill_length_mm, 
+                     y = bill_depth_mm,
+                     color = species)) +
+  geom_point()
+```
+
+flipper length by species
+
+x = species, y = flipper length
+
+```{r}
+ggplot(data = penguins,
+       aes(x = flipper_length_mm,
+           y = species)) +
+  geom_jitter(color = 'green') +
+  labs(x = "flipper length", y = "species", title = "flipper length by species")
+```
