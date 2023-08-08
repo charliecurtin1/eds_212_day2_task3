@@ -2,7 +2,39 @@
 title: "eds_212_day2_task3"
 ---
 
+section 3: derivatives in R
+
 ```{r}
 library(tidyverse)
 library(palmerpenguins)
+```
+
+derivative expression and slope at the indicated value
+
+1.  Find the slope of f(x) = x^2^ at x = 3
+
+2.  Find the slope of P(a) = 2(3a + 2)^4^ -5 at a = 1.2
+
+```{r}
+fx = expression(x ^ 2)
+
+dfdx = D(fx, 'x')
+
+dfdx
+
+x = 3
+
+eval(dfdx)
+```
+
+```{r}
+pa = expression(2 * (3 * a + 2) ^ 4 - 5)
+
+dpda = D(pa, 'a')
+
+dpda
+
+a = 1.2
+
+eval(dpda)
 ```
